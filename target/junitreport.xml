@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="20.373">
+    <testcase classname="Create new quote in Sales/Quotes" name="User creates a new quote in Sales/Quotes" time="12.113">
+        <system-out><![CDATA[Given the user logged in to the application with 'stanemirdanstefan@gmail.com' and 'B3x!oAG1'.passed
+And the user is on the Quotes page..........................................passed
+When the user creates a new quote with 'new quote' and '10' and '12'........passed
+Then the quote is successfully created with the correct values for 'new quote' and '10' and '12'.passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Change status of a quote" name="User changes status of a quote from draft to pending" time="8.185">
+        <system-out><![CDATA[Given the user logged in to the application with "stanemirdanstefan@gmail.com" and "B3x!oAG1".passed
+And the user is on the Quotes page..........................................passed
+And there is a quote in "Draft".............................................passed
+When the user marks the quote as "Pending"..................................passed
+Then the quote status should change to "Pending"............................passed
+]]></system-out>
+    </testcase>
+</testsuite>
