@@ -1,35 +1,22 @@
 package stepdefinitions;
 
-
-import com.microsoft.playwright.Browser;
-import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
-import com.microsoft.playwright.Playwright;
-
-import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import io.cucumber.java.Scenario;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.*;
 
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.util.Properties;
 
 public class SalesSteps extends BasePage {
-
 
     HomePage homePage;
     SalesPage salesPage;
 
-
     Page page;
 
     @Before
-
     public void initiateBrowserAndPages() {
         try {
 
@@ -37,15 +24,12 @@ public class SalesSteps extends BasePage {
             String appurl = System.getProperty("appurl") == null ? "https://idp.bexio.com/login" : System.getProperty("appurl");
 
             //Chrome
-
             page = createPlaywrightPageInstance(browser);
             page.navigate(appurl);
             System.out.println("set browser ==== " + browser);
             System.out.println("created app url ==== " + appurl);
             homePage = new HomePage(page);
             salesPage = new SalesPage(page);
-
-
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -53,7 +37,6 @@ public class SalesSteps extends BasePage {
 
     @Given("the user logged in to the application with {string} and {string}")
     public void userLoginsToApp(String emailAddress, String password) {
-//        homePage.navigateToUrl("https://idp.bexio.com/login");
         homePage.login(emailAddress, password);
     }
 
@@ -73,7 +56,7 @@ public class SalesSteps extends BasePage {
     }
 
     @And("there is a quote in {string}")
-    public void thereIsAQuoteIn(String state) {
+    public void thereIsAQuoteIn(String state) throws Exception {
         salesPage.checkThereIsAtLeastOneInState(state);
     }
 
@@ -86,17 +69,5 @@ public class SalesSteps extends BasePage {
     public void theQuoteStatusShouldChangeTo(String newState) {
         salesPage.checkNewState(newState);
     }
-
-    @After
-    public void tearDown(Scenario scenario) {
-        if (browser != null) {
-            browser.close();
-        }
-        if (page != null) {
-            page.close();
-        }
-    }
-
-
 
 }

@@ -9,5 +9,5 @@ Feature: Change status of a quote
 
     Examples:
 
-      |EmailAddress|Password|QuoteState|NewState|
-      |stanemirdanstefan@gmail.com|B3x!oAG1|Draft|Pending|
+      | EmailAddress                | Password | QuoteState | NewState |
+      | stanemirdanstefan@gmail.com | B3x!oAG1 | Draft      | Pending  |

@@ -1,17 +1,11 @@
 package pages;
 
 import com.microsoft.playwright.Browser;
-import com.microsoft.playwright.BrowserContext;
 import com.microsoft.playwright.BrowserType;
-import com.microsoft.playwright.BrowserType.LaunchOptions;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 
 public abstract class BasePage {
-
-    /**
-     * Page
-     */
 
     protected Browser browser;
     protected Page page;
@@ -28,7 +22,6 @@ public abstract class BasePage {
             case "Webkit":
                 browserType = Playwright.create().webkit();
                 break;
-
         }
         if (browserType == null) {
             throw new IllegalArgumentException("Could not launch a browser for type " + browserTypeAsString);
@@ -36,7 +29,5 @@ public abstract class BasePage {
         browser = browserType.launch(new BrowserType.LaunchOptions().setHeadless(false));
         page = browser.newPage();
         return page;
-
     }
-
 }

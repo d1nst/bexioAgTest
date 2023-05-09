@@ -1,17 +1,8 @@
 package pages;
 
-
 import com.microsoft.playwright.Page;
 
-
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Logger;
-
-import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 import static utils.Utils.*;
-
 
 public class SalesPage extends BasePage {
 
@@ -20,8 +11,6 @@ public class SalesPage extends BasePage {
     public SalesPage(Page page) {
         this.page = page;
     }
-
-    //locators
 
     String salesDD = "//a[contains(text(),\"Sales\")]";
     String quotesLi = "//a[contains(text(),\"Quotes\")]";
@@ -43,7 +32,6 @@ public class SalesPage extends BasePage {
     String newQuoteStatus = "//span[contains(@class,\"label label\")]";
 
 
-
     public void navigateToQuotes() {
         clickElement(page, salesDD);
         clickElement(page, quotesLi);
@@ -62,23 +50,15 @@ public class SalesPage extends BasePage {
     }
 
     public void newQuoteWasCreated(String desc, String quantity, String price) {
-
         assertContains(page, newQuoteDesc, desc);
         assertContains(page, newQuoteQuantity, quantity);
         assertContains(page, newQuoteIP, price);
-
         int totalPrice = Integer.parseInt(quantity) * Integer.parseInt(price);
-
         assertContains(page, newQuotePriceTotal, Integer.toString(totalPrice));
-
     }
 
-    public void checkThereIsAtLeastOneInState(String state) {
-
-        System.out.println(state);
-
+    public void checkThereIsAtLeastOneInState(String state) throws Exception {
         clickFirstElementWithLocator(page, "//tbody/tr/td/span[contains(text(),\"" + state + "\")]");
-
     }
 
     public void setNewState(String state) {

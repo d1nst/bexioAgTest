@@ -7,7 +7,7 @@ Feature: Create new quote in Sales/Quotes
     Then the quote is successfully created with the correct values for '<Description>' and '<Quantity>' and '<Individual Price>'
 
     Examples:
-      |EmailAddress|Password|Description|Quantity|Individual Price|
-      |stanemirdanstefan@gmail.com|B3x!oAG1|new quote|10|12   |
+      | EmailAddress                | Password | Description | Quantity | Individual Price |
+      | stanemirdanstefan@gmail.com | B3x!oAG1 | new quote   | 10       | 12               |
 
 

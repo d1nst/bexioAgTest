@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2023-05-08T14:31:50.980Z",
+        "start_timestamp": "2023-05-09T07:09:01.439Z",
         "before": [
           {
             "result": {
-              "duration": 3318867000,
+              "duration": 3229311000,
               "status": "passed"
             },
             "match": {
@@ -19,23 +19,12 @@
         "name": "User creates a new quote in Sales/Quotes",
         "description": "",
         "id": "create-new-quote-in-sales/quotes;user-creates-a-new-quote-in-sales/quotes;;2",
-        "after": [
-          {
-            "result": {
-              "duration": 101241000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "stepdefinitions.SalesSteps.tearDown(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 1880750000,
+              "duration": 1891696000,
               "status": "passed"
             },
             "line": 4,
@@ -57,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 2218811000,
+              "duration": 2801581000,
               "status": "passed"
             },
             "line": 5,
@@ -69,7 +58,7 @@
           },
           {
             "result": {
-              "duration": 3729737000,
+              "duration": 4118099000,
               "status": "passed"
             },
             "line": 6,
@@ -95,7 +84,7 @@
           },
           {
             "result": {
-              "duration": 823186000,
+              "duration": 1328644000,
               "status": "passed"
             },
             "line": 7,
@@ -133,11 +122,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2023-05-08T14:32:03.101Z",
+        "start_timestamp": "2023-05-09T07:09:14.852Z",
         "before": [
           {
             "result": {
-              "duration": 1300819000,
+              "duration": 1349321000,
               "status": "passed"
             },
             "match": {
@@ -149,23 +138,12 @@
         "name": "User changes status of a quote from draft to pending",
         "description": "",
         "id": "change-status-of-a-quote;user-changes-status-of-a-quote-from-draft-to-pending;;2",
-        "after": [
-          {
-            "result": {
-              "duration": 90288000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "stepdefinitions.SalesSteps.tearDown(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 1962414000,
+              "duration": 1682772000,
               "status": "passed"
             },
             "line": 4,
@@ -187,7 +165,7 @@
           },
           {
             "result": {
-              "duration": 2097193000,
+              "duration": 1990420000,
               "status": "passed"
             },
             "line": 5,
@@ -199,7 +177,7 @@
           },
           {
             "result": {
-              "duration": 1195976000,
+              "duration": 1079850000,
               "status": "passed"
             },
             "line": 6,
@@ -217,7 +195,7 @@
           },
           {
             "result": {
-              "duration": 1295343000,
+              "duration": 1227126000,
               "status": "passed"
             },
             "line": 7,
@@ -235,7 +213,7 @@
           },
           {
             "result": {
-              "duration": 237925000,
+              "duration": 100054000,
               "status": "passed"
             },
             "line": 8,
