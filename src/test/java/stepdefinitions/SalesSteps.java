@@ -1,13 +1,18 @@
 package stepdefinitions;
 
 import com.microsoft.playwright.Page;
+import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.*;
 
+import java.nio.file.Paths;
+import java.sql.Timestamp;
 
 public class SalesSteps extends BasePage {
 
@@ -70,4 +75,21 @@ public class SalesSteps extends BasePage {
         salesPage.checkNewState(newState);
     }
 
+    @AfterStep
+    public void afterSteps(Scenario scenario) {
+        if (scenario.isFailed()) {
+            try {
+                Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+                page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get("screenshots", scenario.getSourceTagNames() + "" + timestamp + ".png")));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    @After
+    public void afterScenario() {
+        browser.close();
+        page.close();
+    }
 }

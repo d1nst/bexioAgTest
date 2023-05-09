@@ -1,5 +1,5 @@
 Feature: Change status of a quote
-
+  @f2s1
   Scenario Outline: User changes status of a quote from draft to pending
     Given the user logged in to the application with "<EmailAddress>" and "<Password>"
     And the user is on the Quotes page

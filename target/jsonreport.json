@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2023-05-09T07:09:01.439Z",
+        "start_timestamp": "2023-05-09T15:55:38.655Z",
         "before": [
           {
             "result": {
-              "duration": 3229311000,
+              "duration": 3085594000,
               "status": "passed"
             },
             "match": {
@@ -19,16 +19,27 @@
         "name": "User creates a new quote in Sales/Quotes",
         "description": "",
         "id": "create-new-quote-in-sales/quotes;user-creates-a-new-quote-in-sales/quotes;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 57808000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.SalesSteps.afterScenario()"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 1891696000,
+              "duration": 254964000,
               "status": "passed"
             },
             "line": 4,
-            "name": "the user logged in to the application with \u0027stanemirdanstefan@gmail.com\u0027 and \u0027B3x!oAG1\u0027",
+            "name": "the user logged in to the application with \u0027stanemirdanstefan@gmail.com\u0027 and \u0027B3x!oAG\u0027",
             "match": {
               "arguments": [
                 {
@@ -36,30 +47,53 @@
                   "offset": 43
                 },
                 {
-                  "val": "\u0027B3x!oAG1\u0027",
+                  "val": "\u0027B3x!oAG\u0027",
                   "offset": 77
                 }
               ],
               "location": "stepdefinitions.SalesSteps.userLoginsToApp(java.lang.String,java.lang.String)"
             },
+            "after": [
+              {
+                "result": {
+                  "duration": 1099000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "stepdefinitions.SalesSteps.afterSteps(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 2801581000,
-              "status": "passed"
+              "error_message": "com.microsoft.playwright.TimeoutError: Error {\n  message\u003d\u0027Timeout 30000ms exceeded.\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d logs \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\nwaiting for locator(\"xpath\u003d//a[contains(text(),\\\"Sales\\\")]\") to be visible\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n  name\u003d\u0027TimeoutError\n  stack\u003d\u0027TimeoutError: Timeout 30000ms exceeded.\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d logs \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\nwaiting for locator(\"xpath\u003d//a[contains(text(),\\\"Sales\\\")]\") to be visible\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n    at ProgressController.run (/private/var/folders/m7/y8dvr8t539s1yv3lqxcptcf40000gn/T/playwright-java-16551940894594498932/package/lib/server/progress.js:88:26)\n    at Frame.waitForSelector (/private/var/folders/m7/y8dvr8t539s1yv3lqxcptcf40000gn/T/playwright-java-16551940894594498932/package/lib/server/frames.js:630:23)\n    at FrameDispatcher.waitForSelector (/private/var/folders/m7/y8dvr8t539s1yv3lqxcptcf40000gn/T/playwright-java-16551940894594498932/package/lib/server/dispatchers/frameDispatcher.js:98:117)\n    at DispatcherConnection.dispatch (/private/var/folders/m7/y8dvr8t539s1yv3lqxcptcf40000gn/T/playwright-java-16551940894594498932/package/lib/server/dispatchers/dispatcher.js:312:46)\n}\n\tat com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)\n\tat com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)\n\tat com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:126)\n\tat com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)\n\tat com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:1064)\n\tat com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:1054)\n\tat com.microsoft.playwright.impl.PageImpl.lambda$waitForSelector$91(PageImpl.java:1460)\n\tat com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)\n\tat com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)\n\tat com.microsoft.playwright.impl.PageImpl.waitForSelector(PageImpl.java:1459)\n\tat com.microsoft.playwright.Page.waitForSelector(Page.java:7777)\n\tat utils.Utils.clickElement(Utils.java:15)\n\tat pages.SalesPage.navigateToQuotes(SalesPage.java:36)\n\tat stepdefinitions.SalesSteps.userNavigatesToQuotes(SalesSteps.java:50)\n\tat ✽.the user is on the Quotes page(file:///Users/dan.stanemir/Desktop/bexioAgTest/src/test/java/features/1.%20CreateNewQuote.feature:5)\nCaused by: com.microsoft.playwright.TimeoutError: Error {\n  message\u003d\u0027Timeout 30000ms exceeded.\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d logs \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\nwaiting for locator(\"xpath\u003d//a[contains(text(),\\\"Sales\\\")]\") to be visible\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n  name\u003d\u0027TimeoutError\n  stack\u003d\u0027TimeoutError: Timeout 30000ms exceeded.\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d logs \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\nwaiting for locator(\"xpath\u003d//a[contains(text(),\\\"Sales\\\")]\") to be visible\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n    at ProgressController.run (/private/var/folders/m7/y8dvr8t539s1yv3lqxcptcf40000gn/T/playwright-java-16551940894594498932/package/lib/server/progress.js:88:26)\n    at Frame.waitForSelector (/private/var/folders/m7/y8dvr8t539s1yv3lqxcptcf40000gn/T/playwright-java-16551940894594498932/package/lib/server/frames.js:630:23)\n    at FrameDispatcher.waitForSelector (/private/var/folders/m7/y8dvr8t539s1yv3lqxcptcf40000gn/T/playwright-java-16551940894594498932/package/lib/server/dispatchers/frameDispatcher.js:98:117)\n    at DispatcherConnection.dispatch (/private/var/folders/m7/y8dvr8t539s1yv3lqxcptcf40000gn/T/playwright-java-16551940894594498932/package/lib/server/dispatchers/dispatcher.js:312:46)\n}\n\tat com.microsoft.playwright.impl.Connection.dispatch(Connection.java:224)\n\tat com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:206)\n\tat com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)\n\tat com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:126)\n\tat com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)\n\tat com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:1064)\n\tat com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:1054)\n\tat com.microsoft.playwright.impl.PageImpl.lambda$waitForSelector$91(PageImpl.java:1460)\n\tat com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)\n\tat com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)\n\tat com.microsoft.playwright.impl.PageImpl.waitForSelector(PageImpl.java:1459)\n\tat com.microsoft.playwright.Page.waitForSelector(Page.java:7777)\n\tat utils.Utils.clickElement(Utils.java:15)\n\tat pages.SalesPage.navigateToQuotes(SalesPage.java:36)\n\tat stepdefinitions.SalesSteps.userNavigatesToQuotes(SalesSteps.java:50)\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:578)\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)\n\tat io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:64)\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:104)\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:71)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:199)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:234)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)\n\tat org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)\n",
+              "duration": 30023251000,
+              "status": "failed"
             },
             "line": 5,
             "name": "the user is on the Quotes page",
             "match": {
               "location": "stepdefinitions.SalesSteps.userNavigatesToQuotes()"
             },
+            "after": [
+              {
+                "result": {
+                  "duration": 106387000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "stepdefinitions.SalesSteps.afterSteps(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 4118099000,
-              "status": "passed"
+              "duration": 126000,
+              "status": "skipped"
             },
             "line": 6,
             "name": "the user creates a new quote with \u0027new quote\u0027 and \u002710\u0027 and \u002712\u0027",
@@ -80,12 +114,23 @@
               ],
               "location": "stepdefinitions.SalesSteps.theUserCreatesANewQuote(java.lang.String,java.lang.String,java.lang.String)"
             },
+            "after": [
+              {
+                "result": {
+                  "duration": 62000,
+                  "status": "skipped"
+                },
+                "match": {
+                  "location": "stepdefinitions.SalesSteps.afterSteps(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 1328644000,
-              "status": "passed"
+              "duration": 80000,
+              "status": "skipped"
             },
             "line": 7,
             "name": "the quote is successfully created with the correct values for \u0027new quote\u0027 and \u002710\u0027 and \u002712\u0027",
@@ -106,7 +151,23 @@
               ],
               "location": "stepdefinitions.SalesSteps.theQuoteWasCreated(java.lang.String,java.lang.String,java.lang.String)"
             },
+            "after": [
+              {
+                "result": {
+                  "duration": 54000,
+                  "status": "skipped"
+                },
+                "match": {
+                  "location": "stepdefinitions.SalesSteps.afterSteps(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
             "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@f1s1"
           }
         ]
       }
@@ -122,11 +183,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2023-05-09T07:09:14.852Z",
+        "start_timestamp": "2023-05-09T15:56:12.243Z",
         "before": [
           {
             "result": {
-              "duration": 1349321000,
+              "duration": 1543071000,
               "status": "passed"
             },
             "match": {
@@ -138,12 +199,23 @@
         "name": "User changes status of a quote from draft to pending",
         "description": "",
         "id": "change-status-of-a-quote;user-changes-status-of-a-quote-from-draft-to-pending;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 60605000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.SalesSteps.afterScenario()"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 1682772000,
+              "duration": 2080040000,
               "status": "passed"
             },
             "line": 4,
@@ -161,11 +233,22 @@
               ],
               "location": "stepdefinitions.SalesSteps.userLoginsToApp(java.lang.String,java.lang.String)"
             },
+            "after": [
+              {
+                "result": {
+                  "duration": 173000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "stepdefinitions.SalesSteps.afterSteps(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1990420000,
+              "duration": 3816755000,
               "status": "passed"
             },
             "line": 5,
@@ -173,12 +256,24 @@
             "match": {
               "location": "stepdefinitions.SalesSteps.userNavigatesToQuotes()"
             },
+            "after": [
+              {
+                "result": {
+                  "duration": 168000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "stepdefinitions.SalesSteps.afterSteps(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1079850000,
-              "status": "passed"
+              "error_message": "com.microsoft.playwright.TimeoutError: Error {\n  message\u003d\u0027Timeout 30000ms exceeded.\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d logs \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\nwaiting for locator(\"xpath\u003d//tbody/tr/td/span[contains(text(),\\\"Draft\\\")]\") to be visible\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n  name\u003d\u0027TimeoutError\n  stack\u003d\u0027TimeoutError: Timeout 30000ms exceeded.\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d logs \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\nwaiting for locator(\"xpath\u003d//tbody/tr/td/span[contains(text(),\\\"Draft\\\")]\") to be visible\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n    at ProgressController.run (/private/var/folders/m7/y8dvr8t539s1yv3lqxcptcf40000gn/T/playwright-java-16551940894594498932/package/lib/server/progress.js:88:26)\n    at Frame.waitForSelector (/private/var/folders/m7/y8dvr8t539s1yv3lqxcptcf40000gn/T/playwright-java-16551940894594498932/package/lib/server/frames.js:630:23)\n    at FrameDispatcher.waitForSelector (/private/var/folders/m7/y8dvr8t539s1yv3lqxcptcf40000gn/T/playwright-java-16551940894594498932/package/lib/server/dispatchers/frameDispatcher.js:98:117)\n    at DispatcherConnection.dispatch (/private/var/folders/m7/y8dvr8t539s1yv3lqxcptcf40000gn/T/playwright-java-16551940894594498932/package/lib/server/dispatchers/dispatcher.js:312:46)\n}\n\tat com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)\n\tat com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)\n\tat com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:126)\n\tat com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)\n\tat com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:1064)\n\tat com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:1054)\n\tat com.microsoft.playwright.impl.PageImpl.lambda$waitForSelector$91(PageImpl.java:1460)\n\tat com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)\n\tat com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)\n\tat com.microsoft.playwright.impl.PageImpl.waitForSelector(PageImpl.java:1459)\n\tat com.microsoft.playwright.Page.waitForSelector(Page.java:7777)\n\tat utils.Utils.clickFirstElementWithLocator(Utils.java:30)\n\tat pages.SalesPage.checkThereIsAtLeastOneInState(SalesPage.java:61)\n\tat stepdefinitions.SalesSteps.thereIsAQuoteIn(SalesSteps.java:65)\n\tat ✽.there is a quote in \"Draft\"(file:///Users/dan.stanemir/Desktop/bexioAgTest/src/test/java/features/2.%20ChangeQuoteStatus.feature:6)\nCaused by: com.microsoft.playwright.TimeoutError: Error {\n  message\u003d\u0027Timeout 30000ms exceeded.\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d logs \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\nwaiting for locator(\"xpath\u003d//tbody/tr/td/span[contains(text(),\\\"Draft\\\")]\") to be visible\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n  name\u003d\u0027TimeoutError\n  stack\u003d\u0027TimeoutError: Timeout 30000ms exceeded.\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d logs \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\nwaiting for locator(\"xpath\u003d//tbody/tr/td/span[contains(text(),\\\"Draft\\\")]\") to be visible\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n    at ProgressController.run (/private/var/folders/m7/y8dvr8t539s1yv3lqxcptcf40000gn/T/playwright-java-16551940894594498932/package/lib/server/progress.js:88:26)\n    at Frame.waitForSelector (/private/var/folders/m7/y8dvr8t539s1yv3lqxcptcf40000gn/T/playwright-java-16551940894594498932/package/lib/server/frames.js:630:23)\n    at FrameDispatcher.waitForSelector (/private/var/folders/m7/y8dvr8t539s1yv3lqxcptcf40000gn/T/playwright-java-16551940894594498932/package/lib/server/dispatchers/frameDispatcher.js:98:117)\n    at DispatcherConnection.dispatch (/private/var/folders/m7/y8dvr8t539s1yv3lqxcptcf40000gn/T/playwright-java-16551940894594498932/package/lib/server/dispatchers/dispatcher.js:312:46)\n}\n\tat com.microsoft.playwright.impl.Connection.dispatch(Connection.java:224)\n\tat com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:206)\n\tat com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)\n\tat com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:126)\n\tat com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)\n\tat com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:1064)\n\tat com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:1054)\n\tat com.microsoft.playwright.impl.PageImpl.lambda$waitForSelector$91(PageImpl.java:1460)\n\tat com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)\n\tat com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)\n\tat com.microsoft.playwright.impl.PageImpl.waitForSelector(PageImpl.java:1459)\n\tat com.microsoft.playwright.Page.waitForSelector(Page.java:7777)\n\tat utils.Utils.clickFirstElementWithLocator(Utils.java:30)\n\tat pages.SalesPage.checkThereIsAtLeastOneInState(SalesPage.java:61)\n\tat stepdefinitions.SalesSteps.thereIsAQuoteIn(SalesSteps.java:65)\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:578)\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)\n\tat io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:64)\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:104)\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:71)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:199)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:234)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)\n\tat org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)\n",
+              "duration": 30003171000,
+              "status": "failed"
             },
             "line": 6,
             "name": "there is a quote in \"Draft\"",
@@ -191,12 +286,23 @@
               ],
               "location": "stepdefinitions.SalesSteps.thereIsAQuoteIn(java.lang.String)"
             },
+            "after": [
+              {
+                "result": {
+                  "duration": 95825000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "stepdefinitions.SalesSteps.afterSteps(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1227126000,
-              "status": "passed"
+              "duration": 63000,
+              "status": "skipped"
             },
             "line": 7,
             "name": "the user marks the quote as \"Pending\"",
@@ -209,12 +315,23 @@
               ],
               "location": "stepdefinitions.SalesSteps.theUserMarksTheQuoteAs(java.lang.String)"
             },
+            "after": [
+              {
+                "result": {
+                  "duration": 43000,
+                  "status": "skipped"
+                },
+                "match": {
+                  "location": "stepdefinitions.SalesSteps.afterSteps(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 100054000,
-              "status": "passed"
+              "duration": 41000,
+              "status": "skipped"
             },
             "line": 8,
             "name": "the quote status should change to \"Pending\"",
@@ -227,7 +344,23 @@
               ],
               "location": "stepdefinitions.SalesSteps.theQuoteStatusShouldChangeTo(java.lang.String)"
             },
+            "after": [
+              {
+                "result": {
+                  "duration": 40000,
+                  "status": "skipped"
+                },
+                "match": {
+                  "location": "stepdefinitions.SalesSteps.afterSteps(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
             "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@f2s1"
           }
         ]
       }
