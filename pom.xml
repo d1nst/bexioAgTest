@@ -66,7 +66,7 @@
                     </includes>
                     <systemPropertyVariables>
                         <browser>Chrome</browser>
-                        <appurl>https://idp.bexio.com/login</appurl>
+                        <appurl>https://office.bexio.com/index.php/user/dashboard</appurl>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
