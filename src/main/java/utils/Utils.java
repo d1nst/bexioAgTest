@@ -29,7 +29,7 @@ public class Utils {
     public static void clickFirstElementWithLocator(final Page page, String element) throws Exception {
         page.waitForSelector(element);
         List<String> elements = page.locator(element).allTextContents();
-        System.out.println("A total of " + elements.size() + " elements where found");
+        System.out.println("A total of " + elements.size() + " elements were found");
         try {
             page.click(element + "[1]");
         } catch (Exception e) {
