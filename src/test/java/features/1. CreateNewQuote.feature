@@ -1,5 +1,5 @@
 Feature: Create new quote in Sales/Quotes
-
+  @f1s1
   Scenario Outline: User creates a new quote in Sales/Quotes
     Given the user logged in to the application with '<EmailAddress>' and '<Password>'
     And the user is on the Quotes page
